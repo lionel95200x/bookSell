@@ -17,6 +17,7 @@ angular.module('xebiaRecrutementApp')
     $scope.bookUrl = "";
 
         console.log("nbr item",ngCart.getTotalItems());
+      $scope.nbrItem = ngCart.getTotalItems();
       //Si y'a plus d'un article
       if(ngCart.getTotalItems() > 0){
                 angular.forEach(ngCart.getItems(), function(value, key){

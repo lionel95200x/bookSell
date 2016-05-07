@@ -6,5 +6,22 @@
         <ngcart-cart></ngcart-cart>
     </div>
 
-    Reduction en magasin : {{discountInMag}} €
+
+    <div class="row" ng-show="ngCart.getTotalItems() > 0">
+        <div class="col s4">
+            <div class="card-panel blue accent-3">
+                <span class="text-darken-2">Profitez de differentes promotions selon votre panier</span>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel blue accent-2">
+                <span class="text-darken-2">Reduction appliquable en magasin d'une valeur de {{discountInMag}} €</span>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel blue accent-1">
+                <span class="text-darken-2">Pour {{refurbForShopSliceValue}} € acheté , beneficier d'un bon d'achat de {{refurbForShopValue}} €</span>
+            </div>
+        </div>
+    </div>
 </div>

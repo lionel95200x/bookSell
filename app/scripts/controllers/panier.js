@@ -15,29 +15,41 @@ angular.module('xebiaRecrutementApp')
 
     $scope.commercialOfferUrl = "http://henri-potier.xebia.fr/books/";
     $scope.bookUrl = "";
-    angular.forEach(ngCart.getItems(), function(value, key){
-      if(key != 0) {
-        $scope.bookUrl += "," + value._id;
-      }else{
-        $scope.bookUrl += value._id;
+
+        console.log("nbr item",ngCart.getTotalItems());
+      //Si y'a plus d'un article
+      if(ngCart.getTotalItems() > 0){
+                angular.forEach(ngCart.getItems(), function(value, key){
+                  if(key != 0) {
+                    $scope.bookUrl += "," + value._id;
+                  }else{
+                    $scope.bookUrl += value._id;
+                  }
+                });
+                $scope.finalUrl = $scope.commercialOfferUrl + $scope.bookUrl + "/commercialOffers";
+
+                $http({
+                  method: 'GET',
+                  url: $scope.finalUrl
+                }).success(function(data){
+                  $scope.taxRate = data.offers;
+
+                  //Pourcentage reduction
+                  $scope.discount = $scope.taxRate[0].value;
+                  ngCart.setTaxRate("-" + $scope.discount);
+
+                  //Reduction magasin
+                  $scope.discountInMag = $scope.taxRate[1].value;
+
+                    //Bon d'achat pour montant acheter
+                  $scope.refurbForShopSliceValue = $scope.taxRate[2].sliceValue;
+                    $scope.refurbForShopValue = $scope.taxRate[2].value;
+
+
+
+                }).error(function(){
+                });
       }
-    });
-    $scope.finalUrl = $scope.commercialOfferUrl + $scope.bookUrl + "/commercialOffers";
-
-    $http({
-      method: 'GET',
-      url: $scope.finalUrl
-    }).success(function(data){
-      $scope.taxRate = data.offers;
-
-      //Pourcentage reduction
-      $scope.discount = $scope.taxRate[0].value;
-      ngCart.setTaxRate("-" + $scope.discount);
-
-      //Reduction magasin
-      $scope.discountInMag = $scope.taxRate[1].value;
-    }).error(function(){
-    });
 
 
   });

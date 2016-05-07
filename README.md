@@ -2,9 +2,10 @@
 # xebia-recrutement
 
 
-## Build & development
+## To init Project
 
-Run `grunt` for building and `grunt serve` for preview.
+bower install
+npm install
 
 ## Testing
 

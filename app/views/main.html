@@ -12,8 +12,8 @@
       <ngcart-addtocart id="{{book.isbn}}" name="{{book.title}}" price="{{book.price}}" quantity="1" quantity-max="5">
         Ajouter au panier
       <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="col s2">
-            <img src="{{book.cover}}" alt="" class="responsive-img"> <!-- notice the "circle" class -->
+          <div class="col s3">
+            <img src="{{book.cover}}" alt="" class="responsive-img" width="60px" height="90px"> <!-- notice the "circle" class -->
           </div>
               <span class="black-text">
                 <div ng:model="item.title">{{book.title}}</div>

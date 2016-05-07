@@ -1,0 +1,165 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.leftpan
+{
+  padding-left: 18%;
+}
+
+.btn{
+  height: 27%;
+  width: 40%;
+}
+
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    /*max-width: 1000px;*/
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+li.logo a {
+  font-size: 20px;
+  text-align: center;
+}
+
+li.logo h1 {
+  margin-top: 0px;
+}
+
+input#search{
+  width: calc(100vw - 300px);
+}
+
+li.avatar-menu {
+  padding-left: 15px !important;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+li.avatar-menu span.username {
+  display: inline-block;
+  position: relative;
+  bottom: 16px;
+  margin-left: 10px;
+}
+
+div.container-project{
+  width: calc(100vw - 240px);
+  position: relative;
+  left: 240px;
+  margin: 0 !important;
+  height: calc(100vh - 79px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+div.section-part p.section-title{
+  text-align: center;
+  font-size: 19px;
+  background-color: rgba(15, 15, 15, 0.8);
+  margin: 0;
+  padding: 15px 0;
+  color: #fff;
+}
+
+div.section-card{
+  overflow-y: auto;
+  height: calc(100vh - 145px);
+}
+
+.nav-wrapper form{
+  position: relative;
+  left: 240px;
+}
+
+li.menu-section{
+  padding: 0 30px;
+}
+
+li a.under-menu{
+  padding-left: 60px !important;
+}
+
+.overflowY{
+  overflow-y: auto !important;
+  height: calc(100vh - 195px);
+}
+
+pagination{
+  text-align: center;
+}

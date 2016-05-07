@@ -1,0 +1,64 @@
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header{
+  margin-bottom: 0px;
+}
+
+.side-nav.fixed a, .side-nav li {
+  color: #fff;
+}
+
+a.button-collapse.top-nav {
+  position: absolute;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  left: 0;
+  top: 0;
+  float: none;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 36px;
+  z-index: 2;
+}
+
+.container{
+  width: 100vw !important;
+  max-width: inherit;
+}
+
+.side-nav li.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.section-card .card{
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid white;
+  min-height: 175px;
+}
+
+.input-field input[type=search] {
+  height: 64px;
+}
+
+.container .row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row-project{
+  height: calc(100vh - 195px) !important;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.pagination li.active {
+  background-color: #263238;
+}
+
+.card-action{
+  text-align: center;
+}

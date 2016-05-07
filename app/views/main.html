@@ -1,0 +1,37 @@
+
+<div class="jumbotron">
+  <h1>Boutique de Livres</h1>
+  <p class="lead">
+    Profitez de toutes la collection des Henri Potier
+  </p>
+  <ngcart-summary></ngcart-summary>
+
+  <div class="row marketing">
+    <div ng-repeat="book in books" ng-init="pos=0">
+    <div class="col-xs-6 col-sm-3">
+      <ngcart-addtocart id="{{book.isbn}}" name="{{book.title}}" price="{{book.price}}" quantity="1" quantity-max="5">
+
+      <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="col s2">
+            <img src="{{book.cover}}" alt="" class="responsive-img" width="40%" height="40%"> <!-- notice the "circle" class -->
+          </div>
+              <span class="black-text">
+                <div ng:model="item.title">{{book.title}}</div>
+                <div ng:model="item.price">{{book.price}} €</div>
+              </span>
+        </ngcart-addtocart>
+
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<hr/>
+
+

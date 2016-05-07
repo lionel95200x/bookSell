@@ -21,9 +21,14 @@ npm install
 
 grunt serve
 
-## Testing
+## Technologie utilisé
 
-Running `grunt test` will run the unit tests with karma.
-# bookSell
-Sell book with sales
+# Javascript
+Angular Js
+  ngCart Js
+
+# Css
+
+Materialize
+Bootstrap
 

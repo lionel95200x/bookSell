@@ -8,26 +8,26 @@ Henri Potier. Tous les enfants du monde trouvaient les histoires de cet adolesce
 L’éditeur de cette collection, dans un immense élan de générosité
 
 
-## Initialisation du projet
+# Initialisation du projet
 
 Executer les commandes
 
-# Installation dependances
+### Installation dependances
 bower install
 
 npm install
 
-# Lancement serveur
+### Lancement serveur
 
 grunt serve
 
-## Technologie utilisé
+# Technologie utilisé
 
-# Javascript
+### Javascript
 Angular Js
   ngCart Js
 
-# Css
+### Css
 
 Materialize
 Bootstrap

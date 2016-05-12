@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('ngCart', ['ngCart.directives'])
+angular.module('ngCart', ['ngCart.directives','PanierCtrl'])
 
     .config([function () {
 
@@ -76,16 +76,19 @@ angular.module('ngCart', ['ngCart.directives'])
             return  this.getCart().shipping;
         };
 
-        this.setTaxRate = function(taxRate){
+        this.setTaxRate = function(taxRate,index){
             this.$cart.taxRate = +parseFloat(taxRate).toFixed(2);
             return this.getTaxRate();
         };
+
 
         this.getTaxRate = function(){
             return this.$cart.taxRate
         };
 
         this.getTax = function(){
+            console.log("test 2");
+
             return +parseFloat(((this.getSubTotal()/100) * this.getCart().taxRate )).toFixed(2);
         };
 
@@ -124,6 +127,7 @@ angular.module('ngCart', ['ngCart.directives'])
         };
 
         this.totalCost = function () {
+            console.log("test");
             return +parseFloat(this.getSubTotal() + this.getShipping() + this.getTax()).toFixed(2);
         };
 

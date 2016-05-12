@@ -21,8 +21,8 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
-            <td>{{ ngCart.getTax() | currency }}</td>
+            <td>Reduction ({{ ngCart.getTaxRate() }}%):</td>
+            <td> {{ ngCart.getTax() | currency }}</td>
         </tr>
         <tr ng-show="ngCart.getShipping()">
             <td></td>

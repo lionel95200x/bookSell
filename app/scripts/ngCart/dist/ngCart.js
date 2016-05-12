@@ -27,7 +27,7 @@ angular.module('ngCart', ['ngCart.directives'])
 
     }])
 
-    .service('ngCart', ['$rootScope', 'ngCartItem', 'store', function ($rootScope, ngCartItem, store) {
+    .service('ngCart', ['$rootScope', 'ngCartItem', 'store','panierService', function ($rootScope, ngCartItem, store,panierService) {
 
         this.init = function(){
             this.$cart = {
@@ -86,7 +86,21 @@ angular.module('ngCart', ['ngCart.directives'])
         };
 
         this.getTax = function(){
-            return +parseFloat(((this.getSubTotal()/100) * this.getCart().taxRate )).toFixed(2);
+            if(panierService.getChoice() == 1)
+            {
+                return +parseFloat(((this.getSubTotal()/100) * this.getCart().taxRate )).toFixed(2);
+            }
+            else if(panierService.getChoice() == 2)
+            {
+                return +parseFloat(this.getSubTotal() - (this.getSubTotal() + this.getCart().taxRate)).toFixed(2);
+            }else if(panierService.getChoice() == 3){
+                if(this.getSubTotal()>100){
+                    return +parseFloat(this.getSubTotal() - (this.getSubTotal() + this.getCart().taxRate)).toFixed(2);
+                }
+
+            }else{ //Cas par defaut
+                return +parseFloat(((this.getSubTotal()/100) * this.getCart().taxRate )).toFixed(2);
+            }
         };
 
         this.setCart = function (cart) {

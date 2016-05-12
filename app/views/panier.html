@@ -6,19 +6,26 @@
         <ngcart-cart></ngcart-cart>
     </div>
 
-    <div class="row" ng-show="nbrItem > 0">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel blue lighten-4">
+            Choissisez votre promotions selon votre panier
+                </div>
+        </div>
+    </div>
+    <div class="row" ng-show="discount > 0">
         <div class="col s4">
-            <div class="card-panel blue accent-3">
-                <span class="text-darken-2">Profitez de differentes promotions selon votre panier</span>
+            <div class="card-panel" ng-click="updateReduce(discount,1)" ng-class="selectedPromotion == 1 ? 'blue accent-3' : ''">
+                <span class="text-darken-2">Promotion Web :<br> Une reduction de {{discount}} % sur votre panier </span>
             </div>
         </div>
         <div class="col s4">
-            <div class="card-panel blue accent-2">
+            <div class="card-panel" ng-click="updateReduce(discountInMag,2)" ng-class="selectedPromotion == 2 ? 'blue accent-3' : ''">
                 <span class="text-darken-2">Reduction appliquable en magasin d'une valeur de {{discountInMag}} €</span>
             </div>
         </div>
-        <div class="col s4">
-            <div class="card-panel blue accent-1">
+        <div class="col s4" ng-show="subTotal() >= 100">
+            <div class="card-panel" ng-click="updateReduce(refurbForShopSliceValue,3)" ng-class="selectedPromotion == 3 ? 'blue accent-3' : ''">
                 <span class="text-darken-2">Pour {{refurbForShopSliceValue}} € acheté , beneficier d'un bon d'achat de {{refurbForShopValue}} €</span>
             </div>
         </div>

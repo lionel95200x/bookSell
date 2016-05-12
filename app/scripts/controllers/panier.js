@@ -12,7 +12,7 @@ angular.module('xebiaRecrutementApp')
 
       $scope.selectedPromotion =  panierService.getChoice();
       $scope.subTotal = function () {
-          return ngCart.getSubTotal;
+          return ngCart.getSubTotal();
       };
       //Promotion 1 appliquer par defaut
       panierService.setChoice(1);

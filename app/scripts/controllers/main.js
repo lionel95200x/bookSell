@@ -9,7 +9,7 @@
  */
 angular.module('xebiaRecrutementApp')
 
-    .controller('MainCtrl',function ($scope,$http,ngCart) {
+    .controller('MainCtrl',function ($scope,$http) {
       $http({
           method: 'GET',
           url: 'http://henri-potier.xebia.fr/books'

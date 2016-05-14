@@ -64,10 +64,8 @@ angular.module('xebiaRecrutementApp')
               $scope.discountInMag = $scope.taxRate[1].value;
 
                     //Bon d'achat pour montant acheter : 3
-                  $scope.refurbForShopSliceValue = $scope.taxRate[2].sliceValue;
-                    $scope.refurbForShopValue = $scope.taxRate[2].value;
-
-
+              $scope.refurbForShopSliceValue = $scope.taxRate[2].sliceValue;
+              $scope.refurbForShopValue = $scope.taxRate[2].value;
 
           }).error(function(msg){
               console.log("Serveur indisponible",msg);

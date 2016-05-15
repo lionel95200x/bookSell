@@ -30,8 +30,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      'app/scripts/ngCart/src/ngCart_test.js',
-      'bower_components/ngCart/src/ngCart_test.js'
+      
     ],
 
 
